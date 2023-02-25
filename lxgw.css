@@ -3,9 +3,6 @@
 @import "lxgw/sourcemode.dark.css";
 @import "/lxgw/LXGWWenKai-Regular.ttf";
 @import "/lxgw/LXGWWenKai-Bold.ttf";
-@import "/lxgw/LXGWWenKai-Light.ttf";
-@import "/lxgw/LXGWWenKaiMono-Light.ttf";
-@import "/lxgw/LXGWWenKaiMono-Bold.ttf";
 @import "/lxgw/LXGWWenKaiMono-Regular.ttf";
 
 :root {
@@ -335,7 +332,10 @@ var {
     font-family: 'LXGWWenKaiMono-Regular', Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
-code,
+code {
+    color: #ed4759;
+}
+
 tt,
 var {
     background: rgba(0, 0, 0, 0.05);
