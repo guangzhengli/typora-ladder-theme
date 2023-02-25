@@ -1,9 +1,9 @@
 @import "lxgw/mermaid.dark.css";
 @import "lxgw/codeblock.dark.css";
 @import "lxgw/sourcemode.dark.css";
-@import "/lxgw/LXGWWenKai-Regular.ttf";
-@import "/lxgw/LXGWWenKai-Bold.ttf";
-@import "/lxgw/LXGWWenKaiMono-Regular.ttf";
+@import "/lxgw/LXGWWenKai-Regular.woff2";
+@import "/lxgw/LXGWWenKai-Bold.woff2";
+@import "/lxgw/LXGWWenKaiMono-Regular.woff2";
 
 :root {
     --bg-color:  #363B40;
