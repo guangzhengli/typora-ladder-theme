@@ -1,0 +1,60 @@
+@import "ladder.css";
+@import "ladder.user.css";
+@import "ladder-dark.user.css";
+
+:root {
+  --tw-prose-body: var(--tw-prose-invert-body);
+  --tw-prose-headings: var(--tw-prose-invert-headings);
+  --tw-prose-lead: var(--tw-prose-invert-lead);
+  --tw-prose-links: var(--tw-prose-invert-links);
+  --tw-prose-bold: var(--tw-prose-invert-bold);
+  --tw-prose-counters: var(--tw-prose-invert-counters);
+  --tw-prose-bullets: var(--tw-prose-invert-bullets);
+  --tw-prose-hr: var(--tw-prose-invert-hr);
+  --tw-prose-quotes: var(--tw-prose-invert-quotes);
+  --tw-prose-quote-borders: var(--tw-prose-invert-quote-borders);
+  --tw-prose-code: var(--tw-prose-invert-code);
+  --tw-prose-captions: var(--tw-prose-invert-captions);
+  --tw-prose-pre-bg: var(--tw-prose-invert-pre-bg);
+  --tw-prose-th-borders: var(--tw-prose-invert-th-borders);
+  --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
+  --tw-prose-bg: var(--tw-prose-invert-bg);
+  --tw-prose-meta: var(--tw-prose-invert-meta);
+  --tw-prose-meta-bg: var(--tw-prose-invert-meta-bg);
+
+  --tw-button-hover-bg: var(--tw-button-hover-bg-inverted);
+
+  --md-char-color: var(--md-char-color-inverted);
+  --meta-content-color: var(--meta-content-color-inverted);
+  --panel-border-color: var(--panel-border-color-inverted);
+  --active-file-bg-color: var(--active-file-bg-color-inverted);
+  --window-border: var(--window-border-inverted);
+  --search-hit-text-bg-color: var(--search-hit-text-bg-color-inverted);
+  --search-hit-text-font-color: var(--search-hit-text-font-color-inverted);
+  --search-select-bg-color: var(--search-select-bg-color-inverted);
+  --blur-text-color: var(--blur-text-color-inverted);
+  --item-hover-bg-color: var(--item-hover-bg-color-inverted);
+  --typora-source-body: var(--typora-source-body-inverted);
+  --mermaid-theme: var(--mermaid-theme-inverted);
+  --active-toggle-btn-color: var(--active-toggle-btn-color-inverted);
+
+  --code-neutral: var(--code-neutral-inverted);
+  --code-cursor: var(--code-cursor-inverted);
+  --code-string: var(--code-string-inverted);
+  --code-number: var(--code-number-inverted);
+  --code-tag: var(--code-tag-inverted);
+  --code-variable: var(--code-variable-inverted);
+  --code-operator: var(--code-operator-inverted);
+  --code-comment: var(--code-comment-inverted);
+  --code-bracket: var(--code-bracket-inverted);
+  --code-citation: var(--code-citation-inverted);
+
+  --button-bg: var(--button-bg-inverted);
+
+  --md-grid-header: var(--md-grid-header-inverted);
+  --md-grid-header-ext: var(--md-grid-header-ext-inverted);
+  --md-grid-ext: var(--md-grid-ext-inverted);
+  --md-grid-header-active: var(--md-grid-header-active-inverted);
+  --md-grid-active: var(--md-grid-active-inverted);
+  --md-grid-border-color: var(--md-grid-border-color-inverted);
+}

@@ -1,0 +1,1211 @@
+@import "ladder.user.css";
+@import "ladder-light.user.css";
+
+/* FONTS */
+
+@font-face {
+  font-family: "LXGWWenKai-Regular";
+  font-display: block;
+  src: url("ladder/LXGWWenKai-Regular.woff2") format("truetype");
+  font-named-instance: "Regular";
+}
+
+@font-face {
+  font-family: "LXGWWenKai-Blod";
+  font-display: block;
+  src: url("ladder/LXGWWenKai-Bold.woff2") format("truetype");
+  font-named-instance: "Blod";
+}
+
+/* VARIABLES */
+
+:root {
+  --theme-0: #fff;
+
+  /* Slate grayscale */
+  --theme-50: #f8fafc;
+  --theme-100: #f1f5f9;
+  --theme-200: #e2e8f0;
+  --theme-300: #cbd5e1;
+  --theme-400: #94a3b8;
+  --theme-500: #64748b;
+  --theme-600: #475569;
+  --theme-700: #334155;
+  --theme-800: #1e293b;
+  --theme-900: #0f172a;
+
+  /* Tailwind variables */
+  --tw-primary: #62bbf3;
+
+  --tw-prose-body: var(--theme-700);
+  --tw-prose-headings: var(--theme-900);
+  --tw-prose-lead: var(--theme-600);
+  --tw-prose-links: var(--theme-900);
+  --tw-prose-bold: var(--theme-900);
+  --tw-prose-counters: var(--theme-500);
+  --tw-prose-bullets: var(--theme-300);
+  --tw-prose-hr: var(--theme-200);
+  --tw-prose-quotes: var(--theme-900);
+  --tw-prose-quote-borders: var(--theme-200);
+  --tw-prose-captions: var(--theme-500);
+  --tw-prose-code: var(--theme-900);
+  --tw-prose-pre-code: var(--theme-100);
+  --tw-prose-pre-bg: var(--theme-800);
+  --tw-prose-th-borders: var(--theme-300);
+  --tw-prose-td-borders: var(--theme-200);
+  --tw-prose-bg: var(--theme-0);
+  --tw-prose-meta: var(--theme-500);
+  --tw-prose-meta-bg: var(--theme-100);
+
+  --tw-prose-invert-body: var(--theme-300);
+  --tw-prose-invert-headings: var(--theme-0);
+  --tw-prose-invert-lead: var(--theme-400);
+  --tw-prose-invert-links: var(--theme-0);
+  --tw-prose-invert-bold: var(--theme-0);
+  --tw-prose-invert-counters: var(--theme-400);
+  --tw-prose-invert-bullets: var(--theme-600);
+  --tw-prose-invert-hr: var(--theme-700);
+  --tw-prose-invert-quotes: var(--theme-100);
+  --tw-prose-invert-quote-borders: var(--theme-700);
+  --tw-prose-invert-captions: var(--theme-400);
+  --tw-prose-invert-code: var(--theme-0);
+  --tw-prose-invert-pre-bg: var(--theme-900);
+  --tw-prose-invert-th-borders: var(--theme-600);
+  --tw-prose-invert-td-borders: var(--theme-700);
+  --tw-prose-invert-bg: var(--theme-800);
+  --tw-prose-invert-meta: var(--theme-400);
+  --tw-prose-invert-meta-bg: var(--theme-700);
+
+  --tw-highlight-color: #fde047; /* yellow-300 */
+  --tw-drop-shadow-md: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07))
+    drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+  --tw-button-hover-bg: var(--theme-100);
+
+  --tw-button-hover-bg-inverted: var(--theme-700);
+
+  /* Typora variables */
+
+  --background: var(--tw-prose-bg);
+  --bg-color: var(--tw-prose-bg);
+  --text-color: var(--tw-prose-body);
+  --primary-color: var(--tw-primary);
+  --md-char-color: var(--theme-400);
+  --meta-content-color: var(--theme-500);
+  --typora-source-body: var(--theme-800);
+  --heading-char-color: var(--md-char-color);
+  --mermaid-theme: neutral;
+  --active-toggle-btn-color: var(--theme-200);
+
+  --md-char-color-inverted: var(--theme-500);
+  --meta-content-color-inverted: var(--theme-400);
+  --typora-source-body-inverted: var(--theme-300);
+  --mermaid-theme-inverted: dark;
+  --active-toggle-btn-color-inverted: var(--theme-400);
+
+  /* Sidebar */
+  --side-bar-bg-color: var(--tw-prose-bg);
+  --active-file-bg-color: var(--theme-100);
+  --active-file-text-color: var(--tw-prose-bold);
+  --active-file-border-color: var(--theme-100);
+  --panel-border-color: var(--theme-300);
+  --blur-text-color: var(--theme-300);
+  --window-border: 1px solid var(--theme-200);
+  --item-hover-bg-color: var(--theme-100);
+  --search-hit-text-bg-color: var(--theme-200);
+  --search-hit-text-font-color: inherit;
+  --search-select-text-color: var(--select-text-font-color);
+  --search-select-bg-color: var(--select-text-bg-color);
+
+  --blur-text-color-inverted: var(--theme-500);
+  --panel-border-color-inverted: var(--theme-700);
+  --active-file-bg-color-inverted: var(--theme-700);
+  --window-border-inverted: 1px solid var(--theme-700);
+  --search-hit-text-bg-color-inverted: var(--theme-700);
+  --search-hit-text-font-color-inverted: var(--theme-0);
+  --search-select-bg-color-inverted: var(--theme-400);
+  --rawblock-edit-panel-bd: var(--tw-prose-pre-bg);
+  --item-hover-bg-color-inverted: var(--theme-700);
+
+  --monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+
+  /* Custom */
+  --footnote: var(--tw-prose-body);
+  /* I'd love to use the --theme grayscale for --footnote-bg, but there's (currently)
+  no way to add an alpha-channel to a CSS variable (and we need the transparency
+  because otherwise the caret wil not be visible), so I here just used a hardcoded
+  copy of --theme-500 */
+  --footnote-bg: #94a3b855;
+  --button-bg: var(--theme-200);
+
+  --button-bg-inverted: var(--theme-600);
+
+  --md-grid-header: var(--theme-100);
+  --md-grid-header-ext: var(--theme-400);
+  --md-grid-ext: var(--theme-300);
+  --md-grid-header-active: var(--theme-500);
+  --md-grid-active: var(--theme-400);
+  --md-grid-border-color: var(--theme-500);
+
+  --md-grid-header-inverted: var(--theme-600);
+  --md-grid-header-ext-inverted: var(--theme-500);
+  --md-grid-ext-inverted: var(--theme-600);
+  --md-grid-header-active-inverted: var(--theme-400);
+  --md-grid-active-inverted: var(--theme-500);
+  --md-grid-border-color-inverted: var(--theme-200);
+
+  --code-blocks-font-size: 0.9em;
+  --inline-code-font-size: 0.9em;
+}
+
+.ty-file-search-match-text {
+  background-color: var(--search-hit-text-bg-color);
+}
+
+/* TAILWIND RESET */
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: currentColor;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: "";
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+*/
+
+#text {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+  tab-size: 4;
+  /* 3 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+#text {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: "LXGWWenKai-Blod";
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--monospace);
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/* TAILWIND PROSE IMPLEMENTATION */
+
+#write {
+  font-size: 1.25rem /* 20px */;
+  line-height: 1.8;
+}
+
+html,
+body {
+  font-family: "LXGWWenKai-Regular";
+}
+
+/* on Windows/Linux, it is the part that is not titlebar or status bar. */
+content,
+titlebar {
+  background: var(--tw-prose-bg);
+}
+
+#write {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: var(--tw-prose-body);
+  max-width: 60ch;
+}
+
+#write > :where(:first-child) {
+  margin-top: 0;
+}
+
+#write > :where(:last-child) {
+  margin-bottom: 0;
+}
+
+/**
+  * ---------------------
+  * Block Elements
+  */
+
+/* yaml */
+pre.md-meta-block {
+  color: var(--tw-prose-meta);
+  background-color: var(--tw-prose-meta-bg);
+  font-weight: 400;
+  font-size: var(--code-blocks-font-size);
+  line-height: 1.7777778;
+  border-radius: 0.5rem /* 8px */;
+  padding: 1.1111111em 1.3333333em;
+  margin-bottom: 2.8em;
+}
+
+/* headings */
+h1 {
+  color: var(--tw-prose-headings);
+  font-weight: 800;
+  font-size: 2.8em;
+  margin-top: 0;
+  margin-bottom: 0.8571429em;
+  line-height: 1;
+}
+
+h1 strong {
+  font-weight: 900;
+}
+
+h2 {
+  color: var(--tw-prose-headings);
+  font-weight: 700;
+  font-size: 1.8em;
+  margin-top: 1.5555556em;
+  margin-bottom: 0.8888889em;
+  line-height: 1.1111111;
+}
+
+h2 strong {
+  font-weight: 800;
+}
+
+h3 {
+  color: var(--tw-prose-headings);
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-top: 1.6em;
+  margin-bottom: 0.6666667em;
+  line-height: 1.3333333;
+}
+
+h3 strong {
+  font-weight: 700;
+}
+
+h4 {
+  color: var(--tw-prose-headings);
+  font-weight: 600;
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+  line-height: 1.6;
+}
+
+h4 strong {
+  font-weight: 700;
+}
+
+h2 code {
+  font-size: 0.8611111em;
+}
+
+h3 code {
+  font-size: 0.9em;
+}
+
+h2 + * {
+  margin-top: 0;
+}
+
+h3 + * {
+  margin-top: 0;
+}
+
+h4 + * {
+  margin-top: 0;
+}
+
+/* table */
+
+table {
+  width: 100%;
+  table-layout: auto;
+  text-align: left;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: 0.9em;
+  line-height: 1.5555556;
+}
+
+/* table header */
+
+thead {
+  border-bottom-width: 1px;
+  border-bottom-color: var(--tw-prose-th-borders);
+}
+
+thead th {
+  color: var(--tw-prose-headings);
+  font-weight: 600;
+  vertical-align: bottom;
+  padding-right: 0.6666667em;
+  padding-bottom: 0.8888889em;
+  padding-left: 0.6666667em;
+}
+
+thead th:first-child {
+  padding-left: 0;
+}
+
+thead th:last-child {
+  padding-right: 0;
+}
+
+tbody tr {
+  border-bottom-width: 1px;
+  border-bottom-color: var(--tw-prose-td-borders);
+}
+
+tbody tr:last-child {
+  border-bottom-width: 0;
+}
+
+tbody td {
+  vertical-align: baseline;
+  padding-top: 0.8888889em;
+  padding-right: 0.6666667em;
+  padding-bottom: 0.8888889em;
+  padding-left: 0.6666667em;
+}
+
+tbody td:first-child {
+  padding-left: 0;
+}
+
+tbody td:last-child {
+  padding-right: 0;
+}
+
+.md-grid-board tr[row="1"] {
+  background-color: var(--md-grid-header);
+}
+
+.md-grid-board a:hover,
+.md-grid-board a.md-active {
+  background: var(--md-grid-active);
+}
+
+.md-grid-board tr[row="1"] a:hover,
+.md-grid-board tr[row="1"] a.md-active {
+  background: var(--md-grid-header-active);
+}
+
+.md-grid-board .md-grid-ext {
+  background: var(--md-grid-ext);
+}
+
+.md-grid-board tr[row="1"] .md-grid-ext {
+  background: var(--md-grid-header-ext);
+}
+
+.md-grid-board a {
+  border-color: var(--md-grid-border-color) !important;
+}
+
+/* lists */
+
+ol {
+  list-style-type: decimal;
+  padding-left: 1.6em;
+}
+
+li {
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.6em;
+}
+
+#write ul.task-list {
+  padding-left: 0;
+}
+
+#write li.task-list-item {
+  padding-left: 0.4em;
+}
+
+#write input[type="checkbox"] {
+  margin-left: -1em;
+}
+
+input[checked] ~ * {
+  opacity: 0.7;
+  text-decoration: line-through;
+}
+
+ol > li::marker {
+  font-weight: 400;
+  color: var(--tw-prose-counters);
+}
+
+ul > li::marker {
+  color: var(--tw-prose-bullets);
+}
+
+ul > li,
+ol > li {
+  padding-left: 0.4em;
+}
+
+ul > li p,
+ol > li p {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+#write > ul > li > :not(input):first-child,
+#write > ol > li > :not(input):first-child,
+#write > ul > li > input + *,
+#write > ol > li > input + * {
+  margin-top: 1.2em;
+}
+
+#write > ul > li > *:last-child,
+#write > ol > li > *:last-child {
+  margin-bottom: 1.2em;
+}
+
+#write ul > li > p:only-child,
+#write ol > li > p:only-child,
+#write ul > li > input + p:last-child,
+#write ol > li > input + p:last-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+/* blockquote */
+blockquote {
+  font-weight: 500;
+  font-style: italic;
+  color: var(--tw-prose-quotes);
+  border-left-width: 0.25rem;
+  border-left-color: var(--tw-prose-quote-borders);
+  quotes: "\201C""\201D""\2018""\2019";
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+  padding-left: 1.0666667em;
+}
+
+blockquote p:first-of-type::before {
+  content: open-quote;
+}
+
+blockquote p:last-of-type::after {
+  content: close-quote;
+}
+
+/* hr */
+hr {
+  border-color: var(--tw-prose-hr);
+  border-top-width: 1px;
+}
+
+[mdtype="hr"] {
+  margin-top: 2.8em;
+  margin-bottom: 2.8em;
+}
+
+p {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+/* diagram panel */
+.md-diagram-panel {
+  color: var(--tw-prose-body);
+}
+
+.enable-diagrams .md-diagram .code-tooltip {
+  bottom: -1.9em;
+  right: 0;
+}
+
+.md-fences-adv-panel {
+  margin-top: 1.3em;
+}
+
+/* footnote definition */
+sup.md-footnote {
+  color: var(--footnote);
+  background-color: var(--footnote-bg);
+}
+
+.footnotes {
+  font-size: 0.85em;
+}
+
+.md-reverse-footnote-area a {
+  font-family: "LXGWWenKai-Regular";
+  text-decoration: none;
+  color: var(--tw-primary);
+  border-radius: 3px;
+}
+
+.md-hover-tip .code-tooltip-content {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  padding: 0.8em 1.2em;
+}
+
+.md-reverse-footnote-area a:hover {
+  background-color: var(--item-hover-bg-color);
+}
+
+.md-def-name:before {
+  color: var(--md-char-color);
+}
+
+.md-rawblock.md-rawblock-on-edit,
+.md-rawblock:hover {
+  color: var(--tw-prose-pre-code);
+}
+
+.md-inline-math script {
+  color: var(--tw-prose-code);
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: var(--tw-highlight-color) !important;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: #000 !important;
+  stroke: #000 !important;
+}
+
+.code-tooltip {
+  color: var(--tw-prose-pre-code);
+}
+
+.code-tooltip .md-mathjax-preview {
+  color: var(--tw-prose-body);
+}
+
+.md-htmlblock-container,
+.md-rawblock-input.md-rawblock-control,
+.md-htmlblock-panel.md-rawblock-control,
+.md-math-container {
+  border-radius: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.md-rawblock-input {
+  font-size: var(--code-blocks-font-size);
+  padding: 0 1.3333333em;
+}
+
+.md-mathblock-panel .md-rawblock-input.md-rawblock-control {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 0;
+}
+
+.md-mathblock-panel .md-rawblock-before {
+  padding-top: 1.1em;
+  border-top-left-radius: 0.5rem;
+}
+
+.md-mathblock-panel .md-rawblock-after {
+  padding-bottom: 1.1em;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.md-htmlblock-panel .md-rawblock-input {
+  padding-top: 1.1111111em;
+  padding-bottom: 1.1111111em;
+}
+
+.md-mathblock-panel .md-rawblock-before,
+.md-mathblock-panel .md-rawblock-after {
+  font-size: var(--code-blocks-font-size);
+  padding-left: calc(4px + 1.3333333em);
+  color: var(--code-bracket);
+}
+
+.md-rawblock-tooltip {
+  color: var(--tw-prose-pre-code);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.md-rawblock-tooltip-name {
+  opacity: 1;
+}
+
+.md-comment {
+  font-size: var(--inline-code-font-size);
+  color: var(--code-comment);
+}
+
+.md-raw-inline,
+.md-tag,
+[md-inline="linebreak"],
+.md-image > .md-meta,
+.md-inline-math.md-expand > .md-inline-math-container {
+  font-size: var(--code-blocks-font-size);
+}
+
+/**
+  * Code Fences
+  * see http://support.typora.io/Code-Block-Styles
+  */
+
+.md-fences {
+  color: var(--tw-prose-pre-code);
+  background-color: var(--tw-prose-pre-bg);
+  font-weight: 400;
+  font-size: var(--code-blocks-font-size);
+  line-height: 1.7777778;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-radius: 0.5rem /* 8px */;
+  padding: 1.1111111em 1.3333333em;
+}
+
+.md-fences.md-focus {
+  border-bottom-right-radius: 0;
+}
+
+.md-fences > .code-tooltip {
+  height: 1.8rem;
+  bottom: -1.8rem;
+  font-size: 0.9rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.code-tooltip .ty-input {
+  min-width: 10rem;
+}
+
+pre code {
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 0;
+  padding: 0;
+  font-weight: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+pre code::before {
+  content: none;
+}
+
+pre code::after {
+  content: none;
+}
+
+/* SYNTAX HIGHLIGHTING */
+
+:root {
+  --code-neutral: var(--theme-800);
+  --code-cursor: var(--theme-900);
+  --code-string: rgb(14, 165, 233); /* sky-500 */
+  --code-number: rgb(245, 158, 11); /* amber-500 */
+  --code-tag: rgb(236, 72, 153); /* pink-500 */
+  --code-variable: var(--theme-700);
+  --code-operator: var(--theme-600);
+  --code-comment: var(--theme-500);
+  --code-bracket: var(--theme-500);
+  --code-citation: var(--theme-500);
+
+  --code-neutral-inverted: var(--theme-100);
+  --code-cursor-inverted: var(--theme-50);
+  --code-string-inverted: #7dd4fc; /* sky-300 */
+  --code-number-inverted: #fde68a; /* amber-100 */
+  --code-tag-inverted: #f472b5; /* pink-400 */
+  --code-variable-inverted: var(--theme-200);
+  --code-operator-inverted: var(--theme-400);
+  --code-comment-inverted: var(--theme-400);
+  --code-bracket-inverted: var(--theme-500);
+  --code-citation-inverted: var(--theme-400);
+}
+
+#write .cm-s-inner {
+  --code-neutral: var(--code-neutral-inverted);
+  --code-cursor: var(--code-cursor-inverted);
+  --code-string: var(--code-string-inverted);
+  --code-number: var(--code-number-inverted);
+  --code-tag: var(--code-tag-inverted);
+  --code-variable: var(--code-variable-inverted);
+  --code-operator: var(--code-operator-inverted);
+  --code-comment: var(--code-comment-inverted);
+  --code-bracket: var(--code-bracket-inverted);
+  --code-citation: var(--code-citation-inverted);
+}
+
+.CodeMirror-selectedtext {
+  background-color: transparent;
+}
+.CodeMirror-cursor {
+  border-left: 1px solid var(--code-cursor) !important;
+}
+.CodeMirror-gutters {
+  border-color: var(--code-comment);
+}
+.cm-s-inner span.cm-string {
+  color: var(--code-string);
+}
+
+.cm-s-inner span.cm-number {
+  color: var(--code-number);
+}
+
+.cm-s-inner span.cm-tag,
+.cm-s-inner span.cm-keyword,
+.cm-s-inner span.cm-qualifier {
+  color: var(--code-tag);
+}
+
+.cm-s-inner .CodeMirror-guttermarker,
+.cm-s-inner .CodeMirror-guttermarker-subtle,
+.cm-s-inner span.cm-comment.cm-def,
+.cm-s-inner span.cm-comment.cm-type,
+.cm-s-inner span.cm-builtin,
+.cm-s-inner span.cm-type,
+.cm-s-inner span.cm-header,
+.cm-s-inner span.cm-link,
+.cm-s-inner span.cm-error {
+  background: transparent;
+  color: var(--code-neutral);
+}
+
+.cm-s-inner span.cm-attribute,
+.cm-s-inner span.cm-property,
+.cm-s-inner span.cm-variable,
+.cm-s-inner span.cm-variable-2,
+.cm-s-inner span.cm-variable-3,
+.cm-s-inner span.cm-type,
+.cm-s-inner span.cm-atom,
+.cm-s-inner span.cm-def {
+  color: var(--code-variable);
+}
+.cm-s-inner span.cm-comment,
+.cm-s-inner .CodeMirror-linenumber {
+  color: var(--code-comment);
+}
+.cm-s-inner span.cm-operator {
+  color: var(--code-operator);
+}
+.cm-s-inner span.cm-bracket,
+.cm-s-inner span.cm-tag.cm-bracket,
+.cm-s-inner span.cm-meta {
+  color: var(--code-bracket);
+}
+
+.cm-s-inner span.cm-link {
+  text-decoration: underline;
+}
+
+/**
+  * Inline Elements
+  */
+
+/* basic styles */
+
+code {
+  color: var(--tw-prose-code);
+  font-weight: 600;
+  font-size: var(--inline-code-font-size);
+}
+
+code::before {
+  content: "`";
+}
+
+code::after {
+  content: "`";
+}
+
+[md-inline="code"].md-expand > code::before,
+[md-inline="code"].md-expand > code::after {
+  content: "";
+}
+
+a code {
+  color: var(--tw-prose-links);
+}
+
+mark code {
+  color: inherit;
+}
+
+strong {
+  color: var(--tw-prose-bold);
+  font-weight: 600;
+}
+
+a {
+  color: var(--tw-prose-links);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* A block-level image should have a total top and bottom margin of 2em.
+It is always wrapped in a paragraph with 1.2em vertical margin, hence we
+add 0.8 here */
+p > .md-image:only-child {
+  margin-top: 0.8em !important;
+  margin-bottom: 0.8em !important;
+}
+
+.md-image > .md-meta {
+  color: var(--tw-prose-code);
+}
+
+/* extend styles */
+
+mark {
+  border-radius: 3px;
+  padding: 0 2px;
+  background-color: var(--tw-highlight-color);
+}
+
+/**
+  * Source Code Mode
+  * see http://support.typora.io/Code-Block-Styles
+  */
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+  background-color: var(--item-hover-bg-color);
+}
+
+#typora-source {
+  font-family: var(--monospace);
+  color: var(--typora-source-body);
+}
+
+#typora-source .cm-header {
+  color: var(--code-tag);
+}
+
+#typora-source .cm-link {
+  color: var(--code-string);
+}
+
+#typora-source .cm-string {
+  color: var(--code-string);
+}
+
+#typora-source .cm-comment {
+  color: var(--code-comment);
+}
+
+#typora-source .cm-atom {
+  color: var(--code-citation);
+}
+
+#typora-source .cm-tag {
+  color: var(--code-tag);
+}
+
+#typora-source .cm-attribute {
+  color: var(--code-variable);
+}
+
+#typora-source .cm-bracket {
+  color: var(--code-bracket);
+}
+
+.file-list-item-file-ext-part {
+  opacity: 0.5;
+}
+
+#write div.md-toc-tooltip {
+  background-color: var(--tw-prose-bg);
+}
+
+.md-toc {
+  font-size: 0.8em;
+}
+
+.md-toc-h1 .md-toc-inner {
+  margin-left: 0;
+}
+
+.md-toc-h2 .md-toc-inner {
+  margin-left: 1em;
+}
+
+.md-toc-h3 .md-toc-inner {
+  margin-left: 2em;
+}
+
+.md-toc-h4 .md-toc-inner {
+  margin-left: 3em;
+}
+
+.md-toc-h5 .md-toc-inner {
+  margin-left: 4em;
+}
+
+.md-toc-h6 .md-toc-inner {
+  margin-left: 5em;
+}
+
+#typora-sidebar {
+  border-right: var(--window-border);
+}
+
+.sidebar-tab {
+  text-transform: none;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.md-search-hit {
+  color: var(--search-hit-text-font-color);
+  background-color: var(--search-hit-text-bg-color);
+}
+
+#md-searchpanel {
+  box-shadow: none;
+  filter: var(--tw-drop-shadow-md);
+}
+
+#md-searchpanel .btn:not(.close-btn):hover {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background-color: var(--tw-button-hover-bg);
+}
+
+#md-searchpanel input,
+#md-searchpanel .btn,
+#searchpanel-msg {
+  border-radius: 5px;
+}
+
+#searchpanel-msg {
+  color: var(--theme-500);
+  border-color: var(--theme-300);
+  background: var(--theme-100);
+}
+
+.form-control {
+  border-color: var(--panel-border-color);
+}
+
+.btn-default {
+  background-color: var(--button-bg);
+}

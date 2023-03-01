@@ -1,0 +1,79 @@
+code {
+    color: #ed4759;
+}
+
+code::before {
+    content: none;
+}
+  
+code::after {
+    content: none;
+}
+
+#write {
+    font-size: 1rem;
+    line-height: 1.625rem;
+    max-width: 58rem;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 64rem;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 75rem;
+	}
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: 1.63rem;
+    line-height: 1.875rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.17rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.12rem;
+    line-height: 1.375rem;
+    margin-bottom: 1.5rem;
+}
+
+h5 {
+    font-size: 0.97rem;
+    line-height: 1.25rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 0.93rem;
+    line-height: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+    font-size: 0.875em;
+}
