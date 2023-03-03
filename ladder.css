@@ -6,14 +6,14 @@
 @font-face {
   font-family: "LXGWWenKai-Regular";
   font-display: block;
-  src: url("ladder/LXGWWenKai-Regular.woff2") format("truetype");
+  src: url("ladder/LXGWWenKai-Regular.ttf") format("truetype");
   font-named-instance: "Regular";
 }
 
 @font-face {
   font-family: "LXGWWenKai-Blod";
   font-display: block;
-  src: url("ladder/LXGWWenKai-Bold.woff2") format("truetype");
+  src: url("ladder/LXGWWenKai-Bold.ttf") format("truetype");
   font-named-instance: "Blod";
 }
 

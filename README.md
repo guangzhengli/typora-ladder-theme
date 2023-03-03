@@ -1,7 +1,7 @@
 [![My Skills](https://skillicons.dev/icons?i=css,html,tailwind)](https://skillicons.dev) <a href="https://www.buymeacoffee.com/iguangzhengli" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 # Typora Ladder theme
-This Typora theme has a look based of the [LXGW](https://github.com/lxgw/LxgwWenKai) font and [Tailwindcss typography](https://tailwindcss.com/docs/typography-plugin) with some style fixd.
+This Typora theme has a look based of the [LXGW](https://github.com/lxgw/LxgwWenKai) font and [typora-tailwind-theme](https://github.com/andredelft/typora-tailwind-theme) with some style fixd.
 
 ## Installation
 Clone this repository. Copy the `ladder.css` `ladder.user.css` `ladder-dark.css`and `ladder folder` to Typora themes folder.
