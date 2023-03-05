@@ -27,7 +27,7 @@ Use the ⌘ (or Ctrl) + Shift + P keyboard shortcut and type theme to quickly ac
 
 中文
 
-这个 Typora 主题是基于 [LXGW](https://github.com/lxgw/LxgwWenKai) 字体和 [Tailwindcss typography](https://tailwindcss.com/docs/typography-plugin) 的主题设计，同时加入了一些 notion 的样式修正。
+这个 Typora 主题是基于 [LXGW](https://github.com/lxgw/LxgwWenKai) 字体和 [typora-tailwind-theme](https://github.com/andredelft/typora-tailwind-theme) 的主题设计，同时加入了一些 notion 的样式修正。
 
 ## 安装
 
