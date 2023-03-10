@@ -19,6 +19,8 @@ Use the ⌘ (or Ctrl) + Shift + P keyboard shortcut and type theme to quickly ac
 
 ## Preview
 
+![9Fw6vA](https://cdn.jsdelivr.net/gh/guangzhengli/PicURL@master/uPic/9Fw6vA.png)
+
 ![ytforT](https://cdn.jsdelivr.net/gh/guangzhengli/PicURL@master/uPic/ytforT.png)
 
 ![XdeVjw](https://cdn.jsdelivr.net/gh/guangzhengli/PicURL@master/uPic/XdeVjw.png)
@@ -39,6 +41,10 @@ Clone 仓库. 复制 `ladder.css` `ladder.user.css` `ladder-dark.css` 文件 `la
 
 ### 使用
 一旦你复制完成，点击主题列表中的 `ladder` or `ladder-dark` 来启用主题。
+
+![MXWrA0](https://cdn.jsdelivr.net/gh/guangzhengli/PicURL@master/uPic/MXWrA0.png)
+
+![tizvpo](https://cdn.jsdelivr.net/gh/guangzhengli/PicURL@master/uPic/tizvpo.png)
 
 ![rrZfoy](https://cdn.jsdelivr.net/gh/guangzhengli/PicURL@master/uPic/rrZfoy.png)
 
