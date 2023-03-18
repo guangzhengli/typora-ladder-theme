@@ -48,6 +48,8 @@
   --code-comment: var(--code-comment-inverted);
   --code-bracket: var(--code-bracket-inverted);
   --code-citation: var(--code-citation-inverted);
+  --code-color: rgb(237, 71, 89);
+  --code-color-bg: rgb(32, 41, 58);
 
   --button-bg: var(--button-bg-inverted);
 

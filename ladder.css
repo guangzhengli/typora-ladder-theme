@@ -456,10 +456,11 @@ pre.md-meta-block {
 h1 {
   color: var(--tw-prose-headings);
   font-weight: 800;
-  font-size: 2.8em;
+  font-size: 2.5rem;
   margin-top: 0;
-  margin-bottom: 0.8571429em;
-  line-height: 1;
+  margin-bottom: 1.5rem;
+  line-height: 2.75rem;
+  letter-spacing: -1.5px;
 }
 
 h1 strong {
@@ -468,11 +469,12 @@ h1 strong {
 
 h2 {
   color: var(--tw-prose-headings);
-  font-weight: 700;
-  font-size: 1.8em;
+  font-weight: bold;
+  font-size: 1.63rem;
   margin-top: 1.5555556em;
-  margin-bottom: 0.8888889em;
-  line-height: 1.1111111;
+  margin-bottom: 1.5rem;
+  line-height: 1.875rem;
+  letter-spacing: -1px;
 }
 
 h2 strong {
@@ -481,11 +483,12 @@ h2 strong {
 
 h3 {
   color: var(--tw-prose-headings);
-  font-weight: 600;
-  font-size: 1.5em;
+  font-weight: bold;
+  font-size: 1.17rem;
   margin-top: 1.6em;
-  margin-bottom: 0.6666667em;
-  line-height: 1.3333333;
+  margin-bottom: 1.5rem;
+  line-height: 1.5rem;
+  letter-spacing: -1px;
 }
 
 h3 strong {
@@ -494,10 +497,11 @@ h3 strong {
 
 h4 {
   color: var(--tw-prose-headings);
+  font-size: 1.12rem;
   font-weight: 600;
   margin-top: 1.8em;
-  margin-bottom: 0.6em;
-  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  line-height: 1.375rem;
 }
 
 h4 strong {
@@ -522,6 +526,19 @@ h3 + * {
 
 h4 + * {
   margin-top: 0;
+}
+
+h5 {
+  font-size: 0.97rem;
+  line-height: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 0.93rem;
+  line-height: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 /* table */
@@ -615,7 +632,7 @@ tbody td:last-child {
 
 ol {
   list-style-type: decimal;
-  padding-left: 1.6em;
+  padding-left: 2.6em;
 }
 
 li {
@@ -625,7 +642,7 @@ li {
 
 ul {
   list-style-type: disc;
-  padding-left: 1.6em;
+  padding-left: 2.6em;
 }
 
 #write ul.task-list {
@@ -924,6 +941,8 @@ pre code::after {
   --code-string: rgb(14, 165, 233); /* sky-500 */
   --code-number: rgb(245, 158, 11); /* amber-500 */
   --code-tag: rgb(236, 72, 153); /* pink-500 */
+  --code-color: rgb(237, 71, 89);
+  --code-color-bg: rgb(237, 237, 235);
   --code-variable: var(--theme-700);
   --code-operator: var(--theme-600);
   --code-comment: var(--theme-500);
@@ -1025,17 +1044,19 @@ pre code::after {
 /* basic styles */
 
 code {
-  color: var(--tw-prose-code);
-  font-weight: 600;
-  font-size: var(--inline-code-font-size);
+  color: var(--code-color);
+  background-color: var(--code-color-bg);
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.3rem;
+  margin: 0.1rem 0.1rem;
 }
 
 code::before {
-  content: "`";
+  content: none;
 }
 
 code::after {
-  content: "`";
+  content: none;
 }
 
 [md-inline="code"].md-expand > code::before,
