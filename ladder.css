@@ -748,6 +748,10 @@ p {
   margin-bottom: 1.2em;
 }
 
+.in-text-selection,::selection {
+  background-color: var(--select-text-bg-color);
+}
+
 /* diagram panel */
 .md-diagram-panel {
   color: var(--tw-prose-body);
