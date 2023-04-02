@@ -1,9 +1,9 @@
 /* you can override the default max-width size here or override each style by your custom css like code font-size */
 
 #write {
-    font-size: 1rem;
+    font-size: 1.125rem;
     line-height: 1.625rem;
-    max-width: 58rem;
+    max-width: 68rem;
 }
 
 @media only screen and (min-width: 1400px) {
