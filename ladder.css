@@ -405,8 +405,9 @@ textarea {
 /* TAILWIND PROSE IMPLEMENTATION */
 
 #write {
-  font-size: 1.125rem /* 20px */;
-  line-height: 1.8;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  max-width: 80rem;
 }
 
 html,
