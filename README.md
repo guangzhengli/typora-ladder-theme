@@ -17,6 +17,11 @@ Once installed, you can toggle the `ladder` or `ladder-dark` Typora Theme using 
 Go to Preferences > Themes > `ladder` or `ladder-dark`
 Use the ⌘ (or Ctrl) + Shift + P keyboard shortcut and type theme to quickly access the current theme.
 
+## Sponsor
+
+if you like this theme, you can sponsor me to buy a cup of coffee.
+https://guangzhengli.com/sponsors
+
 ## Preview
 
 ![9Fw6vA](https://cdn.jsdelivr.net/gh/guangzhengli/PicURL@master/uPic/9Fw6vA.png)
@@ -41,6 +46,11 @@ Clone 仓库. 复制 `ladder.css` `ladder.user.css` `ladder-dark.css` 文件 `la
 
 ### 使用
 一旦你复制完成，点击主题列表中的 `ladder` or `ladder-dark` 来启用主题。
+
+## Sponsor
+
+如果这份教程对你有帮助，欢迎请作者喝杯咖啡。
+https://guangzhengli.com/sponsors
 
 ![MXWrA0](https://cdn.jsdelivr.net/gh/guangzhengli/PicURL@master/uPic/MXWrA0.png)
 
