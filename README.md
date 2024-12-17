@@ -22,6 +22,8 @@ Use the ⌘ (or Ctrl) + Shift + P keyboard shortcut and type theme to quickly ac
 if you like this theme, you can sponsor me to buy a cup of coffee.
 https://guangzhengli.com/sponsors
 
+Sponsored by [The best china travel guide website](https://chinagotrip.com)
+
 ## Preview
 
 ![9Fw6vA](https://cdn.jsdelivr.net/gh/guangzhengli/PicURL@master/uPic/9Fw6vA.png)
